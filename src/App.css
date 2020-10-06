@@ -1,38 +1,49 @@
-.App {
-  text-align: center;
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --primary-background-color: #0f4c81;
+  --primary-text-color: #fdfdfd;
+  --primary-font-family: 'Dosis', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: var(--primary-font-family);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+
+.navbar {
+  height: 7rem;
+  width: 100%;
+  padding: 0 2rem;
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-title {
+  font-weight: 500;
+  font-size: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-tabs {
+  display: flex;
+}
+
+.navbar-items {
+  margin-left: 1rem;
+  font-size: 1.5rem;
 }
