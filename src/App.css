@@ -7,10 +7,15 @@
 :root {
   --primary-background-color: #0f4c81;
   --primary-text-color: #fdfdfd;
+  --secondary-text-color: #333333;
   --primary-font-family: 'Dosis', sans-serif;
 }
 
 body {
+  font-family: var(--primary-font-family);
+}
+
+button {
   font-family: var(--primary-font-family);
 }
 
@@ -54,8 +59,32 @@ a {
 
 .expense-list-container {
   max-width: 800px;
-  margin: 1rem auto;
+  margin: 2rem auto;
   text-align: center;
+}
+
+.expense-list-title {
+  font-size: 4rem;
+  color: var(--secondary-text-color);
+}
+
+.expense-create-btn {
+  border: var(--primary-background-color) 1px solid;
+  width: 200px;
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
+  padding: 1rem 1rem;
+  margin-top: 4rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.expense-create-btn:hover {
+  background-color: white;
+  color: var(--primary-background-color);
 }
 
 .expense-container {
@@ -64,6 +93,11 @@ a {
   height: 10rem;
   margin: 3rem 3rem;
   grid-template-columns: 10rem auto;
+  transition: transform 0.3s ease;
+}
+
+.expense-container:hover {
+  transform: scale(1.1);
 }
 
 .expense-date-container {
@@ -108,3 +142,4 @@ a {
 .expense-description {
   font-size: 1.5rem;
 }
+
