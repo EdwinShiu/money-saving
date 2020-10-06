@@ -5,7 +5,7 @@ export class Navbar extends Component {
   render() {
     return (
       <div>
-        <div className="navbar">
+        <div className="navbar navbar-height">
           <div className="navbar-title">
             Expense Tracker
           </div>
