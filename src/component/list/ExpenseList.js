@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
+import { DataContext } from '../TempData';
 import CreateExpenseModal from './CreateExpense';
 import Expense from './Expense'
 
 export class ExpenseList extends Component {
+
+  static contextType = DataContext;
 
   constructor() {
     super();
@@ -26,10 +29,11 @@ export class ExpenseList extends Component {
   }
 
   render() {
+    var dataList = this.context?.dataList;
     let lists = [];
 
-    for (let i = 0; i < 3; i++) {
-      lists.push(<Expense ids={i} key={i} />);
+    for (let i = 0; i < dataList.length; i++) {
+      lists.push(<Expense dataset={dataList[i]} key={i} />);
     }
 
     return (
