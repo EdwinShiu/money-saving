@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
 export class Expense extends Component {
-  constructor(props) {
-    super(props);
-    console.log(props.ids);
-  }
+  //constructor(props) {
+  //  super(props);
+  //  console.log(props.ids);
+  //}
 
   render() {
 
