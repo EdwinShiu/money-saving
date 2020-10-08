@@ -4,10 +4,10 @@ import {DataContext} from '../TempData'
 
 export default function CreateExpenseModal({open, onClose}) {
 
-  const {addData} = useContext(DataContext);
+  const {dataList, addData} = useContext(DataContext);
 
   const initialState = {
-    id: "",
+    id: `${dataList.length + 1}`,
     date: new Date().toISOString().substr(0, 10),
     type: "",
     description: "",

@@ -30,11 +30,10 @@ export class ExpenseList extends Component {
 
   render() {
     var dataList = this.context?.dataList;
-    //console.log(this.context)
     let lists = [];
-    //console.log("expenselist datalist " + this.context.dataList);
+    //console.log("expenselist datalist " + dataList);
     for (let i = 0; i < dataList.length; i++) {
-      lists.push(<Expense dataset={dataList[i]} key={i} />);
+      lists.push(<Expense dataset={dataList[i]} key={dataList[i].id} />);
     }
 
     return (

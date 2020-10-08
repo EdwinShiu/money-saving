@@ -34,9 +34,14 @@ export class DataContextProvider extends React.Component {
     }));
     //console.log("datalist " + this.state.dataList)
   }
+  deleteData = (id) => {
+    this.setState(prevState => ({
+      dataList: prevState.dataList.filter(data => data.id !== id),
+    }))
+  }
   render() {
     return (
-      <DataContext.Provider value={{dataList: this.state.dataList, addData: this.addData}}>
+      <DataContext.Provider value={{dataList: this.state.dataList, addData: this.addData, deleteData: this.deleteData}}>
         {this.props.children}
       </DataContext.Provider>
     );
