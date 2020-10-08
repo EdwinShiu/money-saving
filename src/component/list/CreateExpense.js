@@ -1,14 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useContext} from 'react'
 import ReactDom from 'react-dom'
+import {DataContext} from '../TempData'
 
 export default function CreateExpenseModal({open, onClose}) {
+
+  const {addData} = useContext(DataContext);
 
   const initialState = {
     id: "",
     date: new Date().toISOString().substr(0, 10),
     type: "",
     description: "",
-    amount: 0,
+    amount: "",
   }
 
   //console.log(currentDate);
@@ -20,7 +23,8 @@ export default function CreateExpenseModal({open, onClose}) {
     //console.log(state);
     // TODO: verify submission
     if (state === "confirm") {
-      console.log(expenseData);
+      //console.log(expenseData);
+      addData(expenseData);
     };
     setExpenseData(initialState);
     onClose();

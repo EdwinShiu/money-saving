@@ -28,9 +28,15 @@ export class DataContextProvider extends React.Component {
       }
     ]
   }
+  addData = (data) => {
+    this.setState(prevState => ({
+      dataList: [...prevState.dataList, data]
+    }));
+    //console.log("datalist " + this.state.dataList)
+  }
   render() {
     return (
-      <DataContext.Provider value={{...this.state}}>
+      <DataContext.Provider value={{dataList: this.state.dataList, addData: this.addData}}>
         {this.props.children}
       </DataContext.Provider>
     );
