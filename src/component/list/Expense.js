@@ -41,6 +41,7 @@ export class Expense extends Component {
         </div>
         <div className="expense-sidebar">
           <button className="expense-delete-btn" onClick={() => this.context.deleteData(data.id)}>x</button>
+          <button className="expense-edit-btn" onClick={() => this.context.editData(data.id)}>E</button>
         </div>
       </div>
     )

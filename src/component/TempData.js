@@ -39,6 +39,7 @@ export class DataContextProvider extends React.Component {
       dataList: prevState.dataList.filter(data => data.id !== id),
     }))
   }
+  
   render() {
     return (
       <DataContext.Provider value={{dataList: this.state.dataList, addData: this.addData, deleteData: this.deleteData}}>
