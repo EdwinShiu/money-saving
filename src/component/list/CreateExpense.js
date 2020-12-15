@@ -31,7 +31,8 @@ export default function CreateExpenseModal({open, onClose}) {
   }
 
   const handleChange = (e) => {
-    setExpenseData({...expenseData, [e.target.name]: e.target.value});
+    //console.log(dataList.length);
+    setExpenseData({...expenseData, [e.target.name]: e.target.value, id: dataList.length+1});
   }
   if (!open) return null;
   return ReactDom.createPortal(

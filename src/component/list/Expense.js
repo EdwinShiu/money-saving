@@ -18,7 +18,7 @@ export class Expense extends Component {
     //console.log(data);
 
     const getMonthYear = () => {
-      return monthNames[parseInt(data.date.substr(5, 2))] + " " + data.date.substr(0, 4);
+      return monthNames[parseInt(data.date.substr(5, 2)-1)] + " " + data.date.substr(0, 4);
     }
 
     return (
